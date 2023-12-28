@@ -6,7 +6,7 @@ authors = ["Your Name <you@example.com>"]
 license = "n"
 readme = "README.md"
 packages = [
-  { include = "gendiff" },
+  { include = "gendiff1" },
 ]
 [tool.poetry.dependencies]
 python = "^3.9"
@@ -14,4 +14,4 @@ python = "^3.9"
 
 [build-system]
 requires = ["poetry-core"]
-build-backend = "gendiff.scripts.gendiff:main"
+build-backend = "gendiff1.scripts.gendiff:main"
