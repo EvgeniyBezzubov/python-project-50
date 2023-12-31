@@ -5,23 +5,23 @@ build:
     poetry build
 
 install:
-	poetry install
+    poetry install
 
 test:
-	poetry run pytest
+    poetry run pytest
 
 test-coverage:
-	poetry run pytest --cov=hexlet_python_package --cov-report xml
+    poetry run pytest --cov=hexlet_python_package --cov-report xml
 
 lint:
-	poetry run flake8 hexlet_python_package
+    poetry run flake8 hexlet_python_package
 
 selfcheck:
-	poetry check
+    poetry check
 
-check: selfcheck test lint
+check:
+    selfcheck test lint
 
 build: check
 	poetry build
-
 .PHONY: install test lint selfcheck check build
