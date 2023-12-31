@@ -6,7 +6,7 @@ test:
 pytestinstall:
 	pip install pytest
 test-coverage:
-	poetry run pytest
+	poetry run pytest --cov=hexlet_python_package --cov-report xml
 
 lint:
 	poetry run flake8 hexlet_python_package
