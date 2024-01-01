@@ -6,10 +6,10 @@ test:
 pytestinstall:
 	pip install pytest
 test-coverage:
-	poetry run pytest --cov tests/
+	poetry run pytest
 
 lint:
-	poetry run flake8 hexlet_python_package
+	poetry run flake8 gendiff
 
 selfcheck:
 	poetry check
