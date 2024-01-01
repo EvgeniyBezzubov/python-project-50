@@ -22,6 +22,8 @@ jobs:
         run: |
           pip install poetry
           pip install pytest
+          pip install pytest-cov
+          pip install PyYAML
           make install
       - name: Run linter and pytest
         run: |
@@ -30,7 +32,7 @@ jobs:
         uses: paambaati/codeclimate-action@v5.0.0
         if: github.ref_name == 'main'
         env:
-          CC_TEST_REPORTER_ID: 2afaefc28c7ee0f83ce03e7856fe5e2eaff03ea75ad0ec8ec9ab49ba94e69527
+          CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
         with:
-          coverageCommand: poetry run pytest
+          coverageCommand: make tests-coverage
           debug: true

@@ -6,7 +6,7 @@ test:
 pytestinstall:
 	pip install pytest
 test-coverage:
-	poetry run pytest
+	poetry run pytest --cov=gendiff --cov-report xml tests/
 
 lint:
 	poetry run flake8 gendiff
