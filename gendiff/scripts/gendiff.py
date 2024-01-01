@@ -5,8 +5,10 @@ import json
 def main():
     parser = argparse.ArgumentParser(prog='gendiff',
                                      description='Compares two configuration '
-                                                 'files and shows a difference.',
-                                     epilog="          And that's how you'd foo a bar")
+                                                 'files and shows a '
+                                                 'difference.',
+                                     epilog="          And that's how "
+                                            "you'd foo a bar")
 
     parser.add_argument("-f", "--format", help="set format of output")
     parser.add_argument('first_file')
