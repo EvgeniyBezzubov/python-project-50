@@ -6,7 +6,7 @@ test:
 pytestinstall:
 	pip install pytest
 test-coverage:
-	poetry run pytest
+	python3 poetry run pytest
 
 lint:
 	poetry run flake8 gendiff
