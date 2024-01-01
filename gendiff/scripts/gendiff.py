@@ -17,9 +17,6 @@ def main():
     generate_diff(args.first_file, args.second_file)
 
 
-# print(args.first_file)
-
-
 def generate_diff(path1, path2):
     """
     --Whats is it
@@ -49,8 +46,8 @@ def generate_diff(path1, path2):
 
     for i in sorted_second_file_dict:
         ans_dict["+ " + i] = sorted_second_file_dict[i]
-  #  print(str(ans_dict))
     return str(ans_dict)
+
 
 if __name__ == "__main__":
     main()
